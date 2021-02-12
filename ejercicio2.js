@@ -10,8 +10,15 @@
 
 
 function arrayOfMultiples (num, length) {
-	
-}
+	const multArr=[];
+    let currentMult=num;
+    multArr.push(currentMult);
+    for(let i=0;i<length-1;i++){
+        currentMult+=num;
+        multArr.push(currentMult);
+    };
+    return multArr;
+};
 
 module.exports = {
     arrayOfMultiples

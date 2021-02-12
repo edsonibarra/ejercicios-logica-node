@@ -25,9 +25,30 @@
 
 // Nota: El arreglo siempre debe de empezar con un valor en falso.
 function divisibleByLeft(n) {
-    //Regresar el arreglo de la respuesta
-	return 0;
-}
+    let flag = false;
+    const ansArr = [];
+    const s = JSON.stringify(n);
+    const arr=[];
+
+    for(let i=0;i<s.length;i++){
+      arr.push(parseInt(s[i]));
+    };
+    console.log(arr);
+    
+    for(let i=0;i<arr.length;i++){
+      const residuo = arr[i]%arr[i-1];
+      if(residuo !== 0){
+        console.log(residuo)
+        ansArr.push(flag);
+      }else{
+        console.log(residuo)
+        flag = true;
+        ansArr.push(flag);
+        flag = false;
+      };
+    };
+    return ansArr;
+};
 
 module.exports = {
     divisibleByLeft
